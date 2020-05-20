@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHATSAPP CHAT VISUALIZER</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>whatsapp chat visualizer</h1>
+        <p>Convert your Whatsapp json database into Timeline Visualization</p>
+      </div>
+      <div class="upload">
+        <form
+          action="/vis"
+          method="POST"
+          enctype="multipart/form-data"
+          class="upload__form"
+        >
+          <label for="input-upload">Upload a JSON file</label>
+          <input type="file" name="dataset" id="input-upload" />
+          <button type="submit" class="btn-submit">submit</button>
+        </form>
+        <small class="upload__ket">
+          After you uploaded the file, we will process the data and show you the
+          timeline visual
+        </small><br>
+        <p style="font-size: x-small;">*This tool only processing WhatsApp database json file</p>
+      </div>
+    </div>
+  </body>
+</html>

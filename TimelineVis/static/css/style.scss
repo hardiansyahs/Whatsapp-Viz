@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap");
+
+$dark: #250404;
+$biasa: #330000;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../img/webbg.png");
+  background-size: cover;
+}
+
+.container {
+  margin: 0 5rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: white;
+}
+
+.upload {
+  margin: auto 0;
+  height: 10rem;
+  width: 30rem;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+
+  &__form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    input[type="file"] {
+      cursor: pointer;
+      border: 2px solid $biasa;
+      padding: 0.5rem 1rem;
+      &::-webkit-file-upload-button {
+        cursor: pointer;
+      }
+    }
+    label {
+      font-weight: 600;
+      color: $dark;
+    }
+    .btn-submit {
+      outline: none;
+      cursor: pointer;
+      height: 2rem;
+      border: none;
+      border: 2px solid $biasa;
+      background-color: $biasa;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: unset;
+        color: $dark;
+      }
+    }
+  }
+  &__ket {
+    margin-top: 0.5rem;
+    flex: 1;
+  }
+}
+
+.title {
+  margin-top: 3rem;
+  h1 {
+    text-transform: capitalize;
+  }
+}
+
+.main-vis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100%;
+  padding: 2rem 0;
+}
+
+.vis {
+  width: 100%;
+  flex-direction: column;
+  margin: 0 5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  .head {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    margin: 1rem 0 1rem 4rem;
+    p:first-child {
+      flex: 1;
+    }
+    p:last-child {
+      flex: 1;
+    }
+  }
+  .search {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+      height: 1.5rem;
+      outline: none;
+      border-left: 2px solid $biasa;
+      border-top: 2px solid $biasa;
+      border-bottom: 2px solid $biasa;
+    }
+    input {
+      border: none;
+      height: 1.5rem;
+      outline: none;
+      border-right: 2px solid $biasa;
+      border-top: 2px solid $biasa;
+      border-bottom: 2px solid $biasa;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  // min-height: 100%;
+  // background-color: rgba($color: #000000, $alpha: 0.5);
+  display: grid;
+  place-content: center;
+  top: 0;
+  &__box {
+    margin: 1rem 0;
+    width: 50rem;
+    background-color: white;
+    padding: 1rem;
+  }
+  &__isi {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p:nth-child(2) {
+      font-weight: 600;
+    }
+  }
+  &::after {
+    content: "";
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    top: 0;
+  }
+}
+
+.show {
+  display: grid !important;
+}

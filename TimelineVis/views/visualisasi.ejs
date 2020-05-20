@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHATSAPP CHAT VISUALIZER</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/moment@latest"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-data@latest"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-timeline@latest/peer/umd/vis-timeline-graph2d.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-vis">
+      <div class="vis">
+        <div class="search">
+          <span
+            class="material-icons input-group-text"
+            id="inputGroup-sizing-default"
+          >
+            search
+          </span>
+          <input type="text" id="search" />
+        </div>
+        <div class="head">
+          <p>contact name</p>
+          <p>timeline</p>
+        </div>
+        <div id="visualization"></div>
+      </div>
+      <div class="modal" style="display: none;">
+        <div class="modal__box"></div>
+      </div>
+    </div>
+    <script>
+      let gerubs = <%- JSON.stringify(groups) %>;
+      let aitems = <%- JSON.stringify(items) %>;
+    </script>
+    <script src="/public/js/visual.js"></script>
+  </body>
+</html>

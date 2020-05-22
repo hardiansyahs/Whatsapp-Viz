@@ -19,7 +19,7 @@ This is an example after you submit the data:
 The content of the message:
 ![content](https://user-images.githubusercontent.com/45519704/82489164-620a2900-9b0b-11ea-9ee2-054da990e94d.png)
 
-## Data syntax
+## JSON Data syntax example
 
 ```
 {
